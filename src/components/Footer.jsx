@@ -48,15 +48,15 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-elevate-gold">Contact Info</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>123 Industrial Park</p>
-              <p>Manufacturing District</p>
-              <p>City, State 12345</p>
+            <div className="space-y-2 text-gray-300">               
+              <p>PLOT NO-224, GIDC, PHASE-II</p>
+              <p>DARED, JAMNAGAR,</p>
+              <p>Gujarat, 361006</p>
               <p className="mt-4">
-                <span className="font-semibold text-elevate-gold">Phone:</span> +1 (555) 123-4567
+                <span className="font-semibold text-elevate-gold">Phone:</span> +91 98248 95049
               </p>
               <p>
-                <span className="font-semibold text-elevate-gold">Email:</span> info@elevateindustries.com
+                <span className="font-semibold text-elevate-gold">Email:</span> elevateind123@gmail.com 
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-elevate-gold mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Elevate Industries. All rights reserved.</p>
+          <p>&copy; 2025 Elevate Industries. All rights reserved.</p>
         </div>
       </div>
     </footer>

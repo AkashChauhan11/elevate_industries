@@ -104,7 +104,7 @@ const Products = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="section-padding bg-gray-900">
+      <section className="section-padding bg-gray-100">
         <div className="container-custom">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (

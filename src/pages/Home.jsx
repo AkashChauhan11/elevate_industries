@@ -324,7 +324,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="section-padding bg-gradient-to-br from-amber-50 to-yellow-100">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <motion.div 
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
@@ -335,83 +335,29 @@ const Home = () => {
           >
             {/* Left Panel - Logo */}
             <motion.div 
-              className="flex justify-center lg:justify-start"
+              className="flex justify-center"
               variants={itemVariants}
             >
               <motion.div 
                 className="relative"
-                variants={cardVariants}
+                 
                 whileHover="hover"
+                initial={{ scale: 0, rotate: 180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ delay: 0.6, duration: 0.9, type: "spring" }}
               >
                 {/* Main Logo Container */}
-                <div className="bg-white rounded-3xl p-12 shadow-2xl border border-amber-200 relative overflow-hidden">
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="absolute inset-0" style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ctext x='30' y='30' text-anchor='middle' font-family='Arial' font-size='12'%3EELEVATE%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                      backgroundRepeat: 'repeat'
-                    }}></div>
-                  </div>
-                  
-                  {/* Logo Design */}
+                <div className="  rounded-3xl  shadow-2xl border border-amber-200 relative overflow-hidden">
+                
+                  {/* Logo Image */}
                   <div className="relative z-10 flex flex-col items-center">
-                    {/* Hexagonal Logo */}
                     <motion.div 
-                      className="w-32 h-40 mb-6 relative"
-                      initial={{ scale: 0, rotate: 180 }}
-                      animate={{ scale: 1, rotate: 0 }}
-                      transition={{ delay: 0.3, duration: 0.6, type: "spring" }}
                     >
-                      {/* Hexagonal Shape */}
-                      <svg className="w-full h-full" viewBox="0 0 128 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M64 0L120 40V120L64 160L8 120V40L64 0Z" fill="url(#goldGradient)" stroke="#D97706" strokeWidth="2"/>
-                        <defs>
-                          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#F59E0B"/>
-                            <stop offset="50%" stopColor="#D97706"/>
-                            <stop offset="100%" stopColor="#B45309"/>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      
-                      {/* E and I Letters */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="flex items-center space-x-2">
-                          {/* Letter E */}
-                          <div className="flex flex-col space-y-1">
-                            <div className="w-6 h-2 bg-amber-200 rounded"></div>
-                            <div className="w-8 h-2 bg-amber-200 rounded"></div>
-                            <div className="w-7 h-2 bg-amber-200 rounded"></div>
-                          </div>
-                          {/* Letter I */}
-                          <div className="flex flex-col space-y-1">
-                            <div className="w-2 h-2 bg-amber-200 rounded"></div>
-                            <div className="w-2 h-8 bg-amber-200 rounded"></div>
-                            <div className="w-2 h-2 bg-amber-200 rounded"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                    
-                    {/* Company Name */}
-                    <motion.div 
-                      className="text-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6, duration: 0.6 }}
-                    >
-                      <h3 className="text-2xl font-serif font-bold text-gray-900 mb-1">ELEVATE</h3>
-                      <h4 className="text-lg font-serif font-bold text-gray-900">INDUSTRIES</h4>
-                    </motion.div>
-                    
-                    {/* Since 1988 Badge */}
-                    <motion.div 
-                      className="absolute bottom-4 left-4 bg-amber-200 rounded-full px-3 py-1 border-2 border-amber-400"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.9, duration: 0.4 }}
-                    >
-                      <span className="text-xs font-semibold text-gray-900">Since 1988</span>
+                      <img 
+                        src="/src/assets/logo.jpeg" 
+                        alt="Elevate Industries Logo" 
+                        className="  object-contain"
+                      />
                     </motion.div>
                   </div>
                 </div>
@@ -430,11 +376,9 @@ const Home = () => {
               >
                 <div className="flex items-center space-x-6">
                   <h2 className="text-3xl font-serif font-bold text-gray-900 bg-yellow-300 px-4 py-2 rounded">
-                    Our Story
+                    About Us
                   </h2>
-                  <h3 className="text-3xl font-serif font-bold text-gray-900">
-                    Who We Are
-                  </h3>
+                  
                 </div>
                 <div className="flex items-center space-x-6">
                   <div className="flex space-x-1">

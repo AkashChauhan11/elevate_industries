@@ -182,11 +182,11 @@ const About = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold mb-2">25+</div>
+              <div className="text-4xl font-bold mb-2">5+</div>
               <div className="text-gray-800">Years of Experience</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-4xl font-bold mb-2">20+</div>
               <div className="text-gray-800">Employees Worldwide</div>
             </div>
             <div>
@@ -194,7 +194,7 @@ const About = () => {
               <div className="text-gray-800">Countries Served</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">1000+</div>
+              <div className="text-4xl font-bold mb-2">50+</div>
               <div className="text-gray-800">Products Manufactured</div>
             </div>
           </div>
