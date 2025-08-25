@@ -148,9 +148,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-cream-white-100">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-amber-50 to-yellow-100 overflow-hidden">
+      <section className="relative min-h-screen bg-gradient-to-br from-cream-white-50 to-warm-yellow-100 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -172,7 +172,7 @@ const Home = () => {
               variants={itemVariants}
             >
               <motion.div 
-                className="bg-white rounded-3xl p-8 shadow-2xl border border-amber-200"
+                className="bg-cream-white-50 rounded-3xl p-8 shadow-2xl border border-warm-yellow-200"
                 variants={cardVariants}
                 whileHover="hover"
               >
@@ -186,7 +186,7 @@ const Home = () => {
                   {Array.from({ length: 20 }).map((_, index) => (
                     <motion.div
                       key={index}
-                      className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-lg shadow-md flex items-center justify-center"
+                      className="w-12 h-12 bg-gradient-to-br from-warm-yellow-400 to-warm-yellow-600 rounded-lg shadow-md flex items-center justify-center"
                       initial={{ scale: 0, rotate: 180 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ 
@@ -201,7 +201,7 @@ const Home = () => {
                         transition: { duration: 0.2 }
                       }}
                     >
-                      <div className="w-6 h-6 bg-amber-200 rounded-sm"></div>
+                      <div className="w-6 h-6 bg-warm-yellow-200 rounded-sm"></div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -214,13 +214,13 @@ const Home = () => {
               variants={itemVariants}
             >
               <motion.div variants={textVariants}>
-                <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 font-serif">
+                <h1 className="text-5xl lg:text-7xl font-bold text-earth-brown-800 mb-6 font-serif">
                   Elevate Industries
                 </h1>
               </motion.div>
               
               <motion.div variants={textVariants}>
-                <p className="text-xl lg:text-2xl text-gray-700 mb-8 max-w-md mx-auto">
+                <p className="text-xl lg:text-2xl text-earth-brown-600 mb-8 max-w-md mx-auto">
                   Ready to elevate your projects with premium brass components?
                 </p>
               </motion.div>
@@ -230,21 +230,21 @@ const Home = () => {
                 variants={textVariants}
               >
                 <motion.button
-                  className="w-10 h-10 bg-elevate-gold rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+                  className="w-10 h-10 bg-warm-yellow-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </motion.button>
                 
                 <motion.button
-                  className="w-10 h-10 bg-elevate-gold rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+                  className="w-10 h-10 bg-warm-yellow-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </motion.button>
@@ -258,53 +258,53 @@ const Home = () => {
             >
               {/* Brass Inserts */}
               <motion.div 
-                className="bg-white rounded-2xl p-6 shadow-xl border border-amber-200"
+                className="bg-cream-white-50 rounded-2xl p-6 shadow-xl border border-warm-yellow-200"
                 variants={productCardVariants}
                 whileHover="hover"
               >
                 <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-xl mb-4 flex items-center justify-center"
+                  className="w-16 h-16 bg-gradient-to-br from-warm-yellow-400 to-warm-yellow-600 rounded-xl mb-4 flex items-center justify-center"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="w-8 h-8 bg-amber-200 rounded-full"></div>
+                  <div className="w-8 h-8 bg-warm-yellow-200 rounded-full"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Brass Inserts</h3>
-                <p className="text-sm text-gray-600">Precision threaded components</p>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Inserts</h3>
+                <p className="text-sm text-earth-brown-600">Precision threaded components</p>
               </motion.div>
 
               {/* Brass Fasteners */}
               <motion.div 
-                className="bg-white rounded-2xl p-6 shadow-xl border border-amber-200"
+                className="bg-cream-white-50 rounded-2xl p-6 shadow-xl border border-warm-yellow-200"
                 variants={productCardVariants}
                 whileHover="hover"
               >
                 <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-xl mb-4 flex items-center justify-center"
+                  className="w-16 h-16 bg-gradient-to-br from-light-grey-400 to-light-grey-600 rounded-xl mb-4 flex items-center justify-center"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+                  <div className="w-6 h-6 bg-light-grey-300 rounded-full"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Brass Fasteners</h3>
-                <p className="text-sm text-gray-600">Industrial strength hardware</p>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Fasteners</h3>
+                <p className="text-sm text-earth-brown-600">Industrial strength hardware</p>
               </motion.div>
 
               {/* Brass Valves */}
               <motion.div 
-                className="bg-white rounded-2xl p-6 shadow-xl border border-amber-200"
+                className="bg-cream-white-50 rounded-2xl p-6 shadow-xl border border-warm-yellow-200"
                 variants={productCardVariants}
                 whileHover="hover"
               >
                 <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl mb-4 flex items-center justify-center"
+                  className="w-16 h-16 bg-gradient-to-br from-earth-brown-400 to-earth-brown-600 rounded-xl mb-4 flex items-center justify-center"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="w-8 h-8 bg-blue-300 rounded-lg"></div>
+                  <div className="w-8 h-8 bg-earth-brown-300 rounded-lg"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Brass Valves</h3>
-                <p className="text-sm text-gray-600">Flow control solutions</p>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Valves</h3>
+                <p className="text-sm text-earth-brown-600">Flow control solutions</p>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -324,7 +324,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-cream-white-100">
         <div className="container-custom">
           <motion.div 
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
@@ -375,9 +375,9 @@ const Home = () => {
                 variants={textVariants}
               >
                 <div className="flex items-center space-x-6">
-                  <h2 className="text-3xl font-serif font-bold text-gray-900 bg-yellow-300 px-4 py-2 rounded">
-                    About Us
-                  </h2>
+                                  <h2 className="text-3xl font-serif font-bold text-earth-brown-800 bg-warm-yellow-200 px-4 py-2 rounded">
+                  About Us
+                </h2>
                   
                 </div>
                 <div className="flex items-center space-x-6">
@@ -395,13 +395,13 @@ const Home = () => {
                 className="space-y-6"
                 variants={textVariants}
               >
-                <p className="text-lg text-gray-800 leading-relaxed">
+                <p className="text-lg text-earth-brown-700 leading-relaxed">
                   We are a leading manufacturer of Builders Brass Hardware fittings since 1988, 
                   producing exclusive quality brass products under our prestigious brands "RAJBADRI," 
                   "RBP," and "STS." Our commitment to excellence and innovation has made us a trusted 
                   name in the industry.
                 </p>
-                <p className="text-lg text-gray-800 leading-relaxed">
+                <p className="text-lg text-earth-brown-700 leading-relaxed">
                   Currently supplying our premium brass hardware across India, we are strategically 
                   expanding our reach to serve customers in the Gulf, Europe, and Africa. Our 
                   state-of-the-art manufacturing facilities ensure consistent quality and timely 
@@ -415,7 +415,7 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/about" className="inline-flex items-center bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 shadow-lg">
+                <Link to="/about" className="inline-flex items-center bg-earth-brown-800 text-cream-white-100 px-6 py-3 rounded-lg font-semibold hover:bg-earth-brown-700 transition-colors duration-300 shadow-lg">
                   Know More
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -428,7 +428,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-cream-white-100">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-16"
@@ -437,8 +437,8 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">Why Choose Us</h2>
+            <p className="text-lg text-earth-brown-600 max-w-3xl mx-auto">
               Discover what sets Elevate Industries apart from the competition. Our commitment to excellence, 
               innovation, and customer satisfaction drives everything we do.
             </p>
@@ -459,18 +459,18 @@ const Home = () => {
                 whileHover="hover"
               >
                 <motion.div 
-                  className="w-16 h-16 bg-elevate-gold rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300 shadow-lg"
+                  className="w-16 h-16 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-6 group-hover:bg-warm-yellow-300 transition-colors duration-300 shadow-lg"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="text-gray-900">
-                    {item.icon}
-                  </div>
+                                  <div className="text-earth-brown-800">
+                  {item.icon}
+                </div>
                 </motion.div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900 group-hover:text-elevate-gold transition-colors duration-300">
+                <h3 className="text-xl font-semibold mb-4 text-earth-brown-800 group-hover:text-warm-yellow-200 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-earth-brown-600 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
@@ -480,7 +480,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
+      <section className="section-padding bg-gradient-to-br from-light-grey-50 to-cream-white-100">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-12"
@@ -489,8 +489,8 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">Our Services</h2>
+            <p className="text-lg text-earth-brown-600 max-w-2xl mx-auto">
               Comprehensive brass manufacturing solutions tailored to your industry needs
             </p>
           </motion.div>
@@ -503,61 +503,61 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <motion.div 
-              className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+              className="bg-cream-white-50 p-6 rounded-2xl shadow-xl border border-warm-yellow-100 hover:shadow-2xl transition-all duration-300"
               variants={cardVariants}
               whileHover="hover"
             >
               <motion.div 
-                className="w-12 h-12 bg-elevate-gold rounded-xl flex items-center justify-center mb-4 shadow-lg"
+                className="w-12 h-12 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-4 shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Custom Manufacturing</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-earth-brown-800">Custom Manufacturing</h3>
+              <p className="text-earth-brown-600">
                 Tailored brass solutions designed to meet your specific requirements and industry standards.
               </p>
             </motion.div>
             
             <motion.div 
-              className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+              className="bg-cream-white-50 p-6 rounded-2xl shadow-xl border border-warm-yellow-100 hover:shadow-2xl transition-all duration-300"
               variants={cardVariants}
               whileHover="hover"
             >
               <motion.div 
-                className="w-12 h-12 bg-elevate-gold rounded-xl flex items-center justify-center mb-4 shadow-lg"
+                className="w-12 h-12 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-4 shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Assurance</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-earth-brown-800">Quality Assurance</h3>
+              <p className="text-earth-brown-600">
                 Rigorous testing and quality control processes ensure every product meets our high standards.
               </p>
             </motion.div>
             
             <motion.div 
-              className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+              className="bg-cream-white-50 p-6 rounded-2xl shadow-xl border border-warm-yellow-100 hover:shadow-2xl transition-all duration-300"
               variants={cardVariants}
               whileHover="hover"
             >
               <motion.div 
-                className="w-12 h-12 bg-elevate-gold rounded-xl flex items-center justify-center mb-4 shadow-lg"
+                className="w-12 h-12 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-4 shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                <svg className="w-6 h-6 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                 </svg>
               </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Global Distribution</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-earth-brown-800">Global Distribution</h3>
+              <p className="text-earth-brown-600">
                 Efficient logistics and worldwide distribution network for timely delivery to your location.
               </p>
             </motion.div>
@@ -566,7 +566,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-elevate-gold">
+      <section className="section-padding bg-warm-yellow-200">
         <motion.div 
           className="container-custom text-center"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -574,10 +574,10 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">
             Ready to Elevate Your Project?
           </h2>
-          <p className="text-xl text-gray-800 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-earth-brown-700 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your brass manufacturing needs and discover how we can help 
             bring your vision to life.
           </p>
@@ -593,7 +593,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" className="btn-secondary bg-gray-900 text-elevate-gold border-gray-900 hover:bg-gray-800 shadow-lg">
+              <Link to="/contact" className="btn-secondary bg-earth-brown-800 text-warm-yellow-200 border-earth-brown-800 hover:bg-earth-brown-700 shadow-lg">
                 Get in Touch
               </Link>
             </motion.div>
@@ -602,7 +602,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/products" className="btn-secondary border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-elevate-gold shadow-lg">
+              <Link to="/products" className="btn-secondary border-earth-brown-800 text-earth-brown-800 hover:bg-earth-brown-800 hover:text-warm-yellow-200 shadow-lg">
                 View Products
               </Link>
             </motion.div>

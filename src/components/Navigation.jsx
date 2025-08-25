@@ -17,7 +17,7 @@ const Navigation = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-black shadow-lg sticky top-0 z-50 border-b border-elevate-gold">
+    <nav className="bg-earth-brown-800 shadow-lg sticky top-0 z-50 border-b border-warm-yellow-200">
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -33,8 +33,8 @@ const Navigation = () => {
                 to={item.path}
                 className={`font-semibold transition-colors duration-300 ${
                   isActive(item.path)
-                    ? 'text-elevate-gold border-b-2 border-elevate-gold'
-                    : 'text-white hover:text-elevate-gold'
+                    ? 'text-warm-yellow-200 border-b-2 border-warm-yellow-200'
+                    : 'text-cream-white-100 hover:text-warm-yellow-200'
                 }`}
               >
                 {item.name}
@@ -45,7 +45,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-white hover:text-elevate-gold hover:bg-gray-900"
+            className="md:hidden p-2 rounded-md text-cream-white-100 hover:text-warm-yellow-200 hover:bg-earth-brown-700"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
@@ -59,7 +59,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-elevate-gold">
+          <div className="md:hidden py-4 border-t border-warm-yellow-200">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
@@ -68,8 +68,8 @@ const Navigation = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`font-semibold transition-colors duration-300 ${
                     isActive(item.path)
-                      ? 'text-elevate-gold'
-                      : 'text-white hover:text-elevate-gold'
+                      ? 'text-warm-yellow-200'
+                      : 'text-cream-white-100 hover:text-warm-yellow-200'
                   }`}
                 >
                   {item.name}

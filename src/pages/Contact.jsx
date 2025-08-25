@@ -33,9 +33,9 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="bg-cream-white-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-50 to-yellow-100 text-gray-900 section-padding">
+      <section className="bg-gradient-to-r from-warm-yellow-200 to-warm-yellow-300 text-gray-800 section-padding">
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -49,15 +49,15 @@ const Contact = () => {
       </section>
 
       {/* Contact Information & Form */}
-      <section className="section-padding bg-white">
+      <section className="section-padding" style={{ backgroundColor: '#fff8e8' }}>
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-elevate-gold mb-6">
+              <h2 className="text-3xl font-bold text-warm-yellow-200 mb-6">
                 Get in Touch
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-700 mb-8">
                 Ready to discuss your brass manufacturing requirements? Our
                 expert team is here to help you find the perfect solution for
                 your project.
@@ -65,9 +65,9 @@ const Contact = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-elevate-gold rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-gray-800"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -87,10 +87,10 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">
+                    <h3 className="font-semibold text-gray-800 mb-1">
                       Address
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-700">
                       PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar,
                       Gujarat, 361006
                     </p>
@@ -98,9 +98,9 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-gray-800"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -114,21 +114,17 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
+                    <p className="text-gray-700">
                       +91 98248 95049
-                      {/* <br />
-                      Sales: +1 (555) 123-4568
-                      <br />
-                      Support: +1 (555) 123-4569 */}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-gray-800"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -142,21 +138,17 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
+                    <p className="text-gray-700">
                       elevateind123@gmail.com
-                      {/* <br />
-                      Sales: sales@elevateindustries.com
-                      <br />
-                      Support: support@elevateindustries.com */}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-gray-800"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -170,14 +162,12 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">
+                    <h3 className="font-semibold text-gray-800 mb-1">
                       Business Hours
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-700">
                       Monday - Sunday: 9:00 AM - 9:00 PM
                       <br />
-                      {/* Saturday: 9:00 AM - 2:00 PM
-                      <br /> */}
                       Friday: Closed
                     </p>
                   </div>
@@ -186,8 +176,8 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-xl border border-amber-200 p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-2xl shadow-xl border border-warm-yellow-200 p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
                 Send us a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -206,7 +196,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="Your full name"
                     />
                   </div>
@@ -225,7 +215,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="your.email@company.com"
                     />
                   </div>
@@ -245,7 +235,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="Your company name"
                     />
                   </div>
@@ -263,7 +253,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -283,7 +273,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                     placeholder="What can we help you with?"
                   />
                 </div>
@@ -302,14 +292,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                     placeholder="Please describe your requirements in detail..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-amber-600 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-warm-yellow-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-warm-yellow-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Send Message
                 </button>
@@ -320,23 +310,19 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
+      <section className="section-padding bg-light-grey-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">
               Visit Us
             </h2>
-            {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Come see our state-of-the-art manufacturing facility and meet our
-              team in person
-            </p> */}
           </div>
 
-          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center border border-amber-200">
+          <div className="bg-light-grey-200 rounded-2xl h-96 flex items-center justify-center border border-warm-yellow-200 shadow-lg">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <div className="w-16 h-16 bg-warm-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-8 h-8 text-gray-800"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -347,76 +333,14 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <p className="text-gray-500">Interactive Map Coming Soon</p>
-              <p className="text-sm text-gray-400">
-                123 Industrial Park, Manufacturing District
+              <p className="text-gray-600 font-medium">Interactive Map Coming Soon</p>
+              <p className="text-sm text-gray-500">
+                PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar, Gujarat, 361006
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      {/* <section className="section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-elevate-gold mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Common questions about our brass manufacturing services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-xl border border-amber-200 p-6 hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                What is your minimum order quantity?
-              </h3>
-              <p className="text-gray-600">
-                Our minimum order quantities vary by product type. For standard
-                products, we typically require a minimum order of 100 pieces.
-                For custom manufacturing, we can discuss requirements based on
-                your specific needs.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-xl border border-amber-200 p-6 hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                How long does production take?
-              </h3>
-              <p className="text-gray-600">
-                Standard products typically ship within 2-3 weeks. Custom
-                manufacturing projects can take 4-8 weeks depending on
-                complexity. We'll provide specific timelines during the
-                quotation process.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-xl border border-amber-200 p-6 hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Do you ship internationally?
-              </h3>
-              <p className="text-gray-600">
-                Yes, we ship to over 50 countries worldwide. We handle all
-                customs documentation and can arrange expedited shipping for
-                urgent orders.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-xl border border-amber-200 p-6 hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                What quality certifications do you have?
-              </h3>
-              <p className="text-gray-600">
-                We hold ISO 9001:2015, ISO 14001:2015, and OHSAS 18001:2007
-                certifications. We also have ASME BPVC and API 6A certifications
-                for specific product lines.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };

@@ -4,36 +4,63 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brass': {
-          50: '#fef7e6',
-          100: '#fdecc3',
-          200: '#fbd68a',
-          300: '#f8bb4d',
-          400: '#f59e20',
-          500: '#f2850e',
-          600: '#e36a0a',
-          700: '#bc4f0c',
-          800: '#963f12',
-          900: '#7a3513',
+        // Natural Palette Colors
+        'warm-yellow': {
+          50: '#FFF8EA',
+          100: '#FFE5A3',
+          200: '#FFD775',
+          300: '#E6C25F',
+          400: '#D4B04A',
+          500: '#C29E35',
+          600: '#B08C20',
+          700: '#9E7A0B',
+          800: '#8C6800',
+          900: '#7A5600',
         },
-        'gold': {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#D4AF37', // Classic gold
-          600: '#B8860B', // Dark goldenrod
-          700: '#A0522D', // Sienna
-          800: '#8B4513', // Saddle brown
-          900: '#654321', // Dark brown
+        'earth-brown': {
+          50: '#F5F0E0',
+          100: '#E8DCC0',
+          200: '#DBC8A0',
+          300: '#CEB480',
+          400: '#C1A060',
+          500: '#A28E65',
+          600: '#8B7355',
+          700: '#745845',
+          800: '#5D3D35',
+          900: '#462225',
         },
-        'elevate': {
-          'black': '#000000',
-          'gold': '#D4AF37',
-          'gold-light': '#FFD700',
-          'gold-dark': '#B8860B',
-        }
+        'cream-white': {
+          50: '#FFFFFF',
+          100: '#FFF8EA',
+          200: '#F5F0E0',
+          300: '#EBE8D0',
+          400: '#E1E0C0',
+          500: '#D7D8B0',
+          600: '#CDD0A0',
+          700: '#C3C890',
+          800: '#B9C080',
+          900: '#AFB870',
+        },
+        'light-grey': {
+          50: '#F8F8F8',
+          100: '#F0F0F0',
+          200: '#E8E8E8',
+          300: '#E0E0E0',
+          400: '#DFE0DF',
+          500: '#D0D0D0',
+          600: '#C0C0C0',
+          700: '#B0B0B0',
+          800: '#A0A0A0',
+          900: '#909090',
+        },
+        // Semantic color mappings
+        'primary': 'var(--color-primary)',
+        'secondary': 'var(--color-secondary)',
+        'background': 'var(--color-background)',
+        'surface': 'var(--color-surface)',
+        'text-primary': 'var(--color-text-primary)',
+        'text-secondary': 'var(--color-text-secondary)',
+        'accent': 'var(--color-accent)',
       }
     },
   },
