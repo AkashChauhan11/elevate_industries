@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
+import partsImage from '../assets/parts.jpeg';
 
 const Home = () => {
   // Animation variants
@@ -176,34 +177,30 @@ const Home = () => {
                 variants={cardVariants}
                 whileHover="hover"
               >
-                <motion.div 
-                  className="grid grid-cols-4 gap-3"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                                <motion.div
+                  className="flex justify-center"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                  {/* Brass Components Grid */}
-                  {Array.from({ length: 20 }).map((_, index) => (
-                    <motion.div
-                      key={index}
-                      className="w-12 h-12 bg-gradient-to-br from-warm-yellow-400 to-warm-yellow-600 rounded-lg shadow-md flex items-center justify-center"
-                      initial={{ scale: 0, rotate: 180 }}
-                      animate={{ scale: 1, rotate: 0 }}
-                      transition={{ 
-                        delay: 0.6 + index * 0.05, 
-                        duration: 0.3,
-                        type: "spring",
-                        stiffness: 200
-                      }}
-                      whileHover={{ 
-                        scale: 1.2, 
-                        rotate: 5,
-                        transition: { duration: 0.2 }
-                      }}
-                    >
-                      <div className="w-6 h-6 bg-warm-yellow-200 rounded-sm"></div>
-                    </motion.div>
-                  ))}
+                  {/* Parts Image */}
+                  <motion.img
+                    src={partsImage}
+                    alt="Industrial Parts"
+                    className="max-w-full h-auto rounded-lg shadow-lg"
+                    initial={{ scale: 0, rotate: -10 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ 
+                      delay: 0.6, 
+                      duration: 0.6,
+                      type: "spring",
+                      stiffness: 200
+                    }}
+                    whileHover={{ 
+                      scale: 1.05, 
+                      transition: { duration: 0.3 }
+                    }}
+                  />
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -354,7 +351,7 @@ const Home = () => {
                     <motion.div 
                     >
                       <img 
-                        src="/src/assets/logo.jpeg" 
+                        src="/logo.jpeg" 
                         alt="Elevate Industries Logo" 
                         className="  object-contain"
                       />
