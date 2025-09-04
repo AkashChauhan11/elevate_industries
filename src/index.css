@@ -1,3 +1,4 @@
+@import './styles/colors.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,18 +10,18 @@
   
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-elevate-gold hover:bg-elevate-gold-dark text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply bg-warm-yellow-200 hover:bg-warm-yellow-300 text-earth-brown-800 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-elevate-gold text-elevate-gold hover:bg-elevate-gold hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    @apply bg-transparent border-2 border-warm-yellow-200 text-warm-yellow-200 hover:bg-warm-yellow-200 hover:text-earth-brown-800 font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
   
   .section-padding {
@@ -31,15 +32,35 @@
     @apply max-w-7xl mx-auto;
   }
   
-  .text-gold {
-    @apply text-elevate-gold;
+  .text-warm-yellow {
+    @apply text-warm-yellow-200;
   }
   
-  .bg-gold {
-    @apply bg-elevate-gold;
+  .bg-warm-yellow {
+    @apply bg-warm-yellow-200;
   }
   
-  .border-gold {
-    @apply border-elevate-gold;
+  .border-warm-yellow {
+    @apply border-warm-yellow-200;
+  }
+  
+  .text-earth-brown {
+    @apply text-earth-brown-500;
+  }
+  
+  .bg-earth-brown {
+    @apply bg-earth-brown-500;
+  }
+  
+  .border-earth-brown {
+    @apply border-earth-brown-500;
+  }
+  
+  .bg-cream-white {
+    @apply bg-cream-white-100;
+  }
+  
+  .bg-light-grey {
+    @apply bg-light-grey-400;
   }
 }
