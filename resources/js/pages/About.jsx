@@ -9,7 +9,7 @@ const About = () => {
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold mb-6">About Elevate Industries</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Leading manufacturer of brass and aluminum components with innovation, quality, and excellence for over 6 years
+            Leading manufacturer of brass and aluminum components with innovation, quality, and excellence for over 7 years
           </p>
         </div>
       </section>
@@ -36,20 +36,8 @@ const About = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg p-8 border border-warm-yellow-200 shadow-xl">
-                <div className="text-center">
-                  <Logo className="w-24 h-24 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
-                  <p className="text-gray-700 mb-6">
-                    To provide innovative brass and aluminum component solutions that empower industries to achieve 
-                    their highest potential while maintaining the highest standards of quality and sustainability.
-                  </p>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
-                  <p className="text-gray-700">
-                    To be the leading manufacturer of precision brass and aluminum components, setting industry 
-                    standards for excellence, innovation, and environmental responsibility.
-                  </p>
-                </div>
+              <div className="p-8 shadow-xl flex items-center justify-center min-h-96">
+                <Logo className="w-48 h-48 sm:w-64 sm:h-64 rounded-full" showText={false} />
               </div>
             </div>
           </div>

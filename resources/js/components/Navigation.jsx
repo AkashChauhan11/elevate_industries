@@ -22,7 +22,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <Logo className="w-16 h-16" />
+            <Logo className="w-12 h-12 sm:w-16 sm:h-16" />
           </Link>
 
           {/* Desktop Navigation */}

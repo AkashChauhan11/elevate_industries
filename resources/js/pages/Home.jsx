@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
 import partsImage from '../assets/parts.jpeg';
+import logoImage from '../assets/logo.jpeg';
 
 const Home = () => {
   // Animation variants
@@ -97,8 +98,8 @@ const Home = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "25+ Years of Excellence",
-      description: "Decades of experience in brass manufacturing with proven track record of delivering quality products."
+      title: "7+ Years of Excellence",
+      description: "Year of experience in brass and aluminum manufacturing with proven track record of delivering quality products."
     },
     {
       icon: (
@@ -115,8 +116,8 @@ const Home = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
         </svg>
       ),
-      title: "Global Supply Network",
-      description: "Worldwide distribution capabilities ensuring timely delivery to any location across the globe."
+      title: "Large Supply Network",
+      description: "Large distribution capabilities ensuring timely delivery to any location."
     },
     {
       icon: (
@@ -140,11 +141,11 @@ const Home = () => {
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
-      title: "Expert Support Team",
-      description: "Dedicated customer service and technical support to assist you throughout your project journey."
+      title: "Expert Workers",
+      description: "Expert workers and skilled craftsmen dedicated to delivering finest quality and precision in every brass and aluminum component."
     }
   ];
 
@@ -162,7 +163,7 @@ const Home = () => {
 
         <div className="container-custom relative z-10">
           <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-screen py-20"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-screen p-6 lg:py-20 px-6 lg:px-0"
             variants={heroVariants}
             initial="hidden"
             animate="visible"
@@ -222,30 +223,6 @@ const Home = () => {
                 </p>
               </motion.div>
 
-              <motion.div 
-                className="flex justify-center space-x-4"
-                variants={textVariants}
-              >
-                <motion.button
-                  className="w-10 h-10 bg-warm-yellow-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <svg className="w-5 h-5 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </motion.button>
-                
-                <motion.button
-                  className="w-10 h-10 bg-warm-yellow-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <svg className="w-5 h-5 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </motion.button>
-              </motion.div>
             </motion.div>
 
             {/* Right Panel - Product Categories */}
@@ -283,7 +260,7 @@ const Home = () => {
                 >
                   <div className="w-6 h-6 bg-light-grey-300 rounded-full"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Fasteners</h3>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Aluminum Components</h3>
                 <p className="text-sm text-earth-brown-600">Industrial strength hardware</p>
               </motion.div>
 
@@ -300,24 +277,24 @@ const Home = () => {
                 >
                   <div className="w-8 h-8 bg-earth-brown-300 rounded-lg"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Valves</h3>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">MS/SS</h3>
                 <p className="text-sm text-earth-brown-600">Flow control solutions</p>
               </motion.div>
             </motion.div>
           </motion.div>
-        </div>
 
-        {/* CTA Button */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
-        >
-          <Link to="/products" className="btn-primary">
-            Explore Our Products
-          </Link>
-        </motion.div>
+          {/* CTA Button */}
+          <motion.div 
+            className="flex justify-center my-2 lg:mt-8 lg:absolute lg:bottom-8 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:mt-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
+          >
+            <Link to="/products" className="btn-primary text-sm px-4 py-3 sm:px-6 sm:py-3">
+              Explore Our Products
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -343,21 +320,12 @@ const Home = () => {
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ delay: 0.6, duration: 0.9, type: "spring" }}
               >
-                {/* Main Logo Container */}
-                <div className="  rounded-3xl  shadow-2xl border border-amber-200 relative overflow-hidden">
-                
-                  {/* Logo Image */}
-                  <div className="relative z-10 flex flex-col items-center">
-                    <motion.div 
-                    >
-                      <img 
-                        src="/logo.jpeg" 
-                        alt="Elevate Industries Logo" 
-                        className="  object-contain"
-                      />
-                    </motion.div>
-                  </div>
-                </div>
+                {/* Logo Image */}
+                <img 
+                  src={logoImage} 
+                  alt="Elevate Industries Logo" 
+                  className="w-56 h-56 sm:w-96 sm:h-96 object-contain border-0 outline-none rounded-2xl"
+                />
               </motion.div>
             </motion.div>
 
@@ -426,7 +394,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-cream-white-100">
+      <section className="section-padding bg-gradient-to-br from-light-grey-50 to-cream-white-100">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-16"
@@ -473,6 +441,99 @@ const Home = () => {
                 </p>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Top Products Section */}
+      <section className="section-padding bg-gradient-to-br from-warm-yellow-50 to-cream-white-100">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">Top Products</h2>
+            <p className="text-lg text-earth-brown-600 max-w-2xl mx-auto">
+              Discover our most popular brass and aluminum components trusted by industries worldwide
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Brass Compression Fittings */}
+            <motion.div 
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-yellow-100 hover:scale-105"
+              variants={cardVariants}
+              whileHover="hover"
+            >
+              <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
+                <svg className="w-20 h-20 text-warm-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-gray-800">Brass Compression Fittings</h3>
+              </div>
+            </motion.div>
+
+            {/* Aluminum Extruded Profiles */}
+            <motion.div 
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-yellow-100 hover:scale-105"
+              variants={cardVariants}
+              whileHover="hover"
+            >
+              <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
+                <svg className="w-20 h-20 text-warm-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-gray-800">Aluminum Extruded Profiles</h3>
+              </div>
+            </motion.div>
+
+            {/* Brass Ball Valves */}
+            <motion.div 
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-yellow-100 hover:scale-105"
+              variants={cardVariants}
+              whileHover="hover"
+            >
+              <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
+                <svg className="w-20 h-20 text-warm-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-gray-800">Brass Ball Valves</h3>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* See All Button */}
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <Link 
+              to="/products" 
+              className="inline-flex items-center bg-earth-brown-800 text-cream-white-100 px-8 py-4 rounded-lg font-semibold hover:bg-earth-brown-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              See All Products
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -580,7 +641,7 @@ const Home = () => {
             bring your vision to life.
           </p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-6 sm:gap-4 justify-center"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
