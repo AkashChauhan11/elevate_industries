@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
 import partsImage from '../assets/parts.jpeg';
 import logoImage from '../assets/logo.jpeg';
+import brass13 from '../assets/parts/brass-13.png';
+import brass14 from '../assets/parts/brass-14.png';
+import brass22 from '../assets/parts/brass-22.png';
+import alu15 from '../assets/parts/alu-15.png';
 
 const Home = () => {
   // Animation variants
@@ -243,8 +247,8 @@ const Home = () => {
                 >
                   <div className="w-8 h-8 bg-warm-yellow-200 rounded-full"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Inserts</h3>
-                <p className="text-sm text-earth-brown-600">Precision threaded components</p>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Parts</h3>
+                {/* <p className="text-sm text-earth-brown-600">Precision threaded components</p> */}
               </motion.div>
 
               {/* Brass Fasteners */}
@@ -260,8 +264,8 @@ const Home = () => {
                 >
                   <div className="w-6 h-6 bg-light-grey-300 rounded-full"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Aluminum Components</h3>
-                <p className="text-sm text-earth-brown-600">Industrial strength hardware</p>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Aluminum Parts</h3>
+                {/* <p className="text-sm text-earth-brown-600">Industrial strength hardware</p> */}
               </motion.div>
 
               {/* Brass Valves */}
@@ -277,8 +281,8 @@ const Home = () => {
                 >
                   <div className="w-8 h-8 bg-earth-brown-300 rounded-lg"></div>
                 </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">MS/SS</h3>
-                <p className="text-sm text-earth-brown-600">Flow control solutions</p>
+                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">MS/SS Parts</h3>
+                {/* <p className="text-sm text-earth-brown-600">Flow control solutions</p> */}
               </motion.div>
             </motion.div>
           </motion.div>
@@ -475,13 +479,15 @@ const Home = () => {
               whileHover="hover"
             >
               <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
-                <svg className="w-20 h-20 text-warm-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                </svg>
+                  <img
+            src={alu15}
+            alt={'Brass Ball Valves'}
+            className="object-contain h-full w-full"
+          />
               </div>
-              <div className="p-4 text-center">
+              {/* <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold text-gray-800">Brass Compression Fittings</h3>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* Aluminum Extruded Profiles */}
@@ -491,13 +497,15 @@ const Home = () => {
               whileHover="hover"
             >
               <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
-                <svg className="w-20 h-20 text-warm-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                </svg>
+                  <img
+            src={brass13}
+            alt={'Brass Ball Valves'}
+            className="object-contain h-full w-full"
+          />
               </div>
-              <div className="p-4 text-center">
+              {/* <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold text-gray-800">Aluminum Extruded Profiles</h3>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* Brass Ball Valves */}
@@ -507,13 +515,15 @@ const Home = () => {
               whileHover="hover"
             >
               <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
-                <svg className="w-20 h-20 text-warm-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                </svg>
+         <img
+            src={brass14}
+            alt={'Brass Ball Valves'}
+            className="object-contain h-full w-full"
+          />
               </div>
-              <div className="p-4 text-center">
+              {/* <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold text-gray-800">Brass Ball Valves</h3>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
 
