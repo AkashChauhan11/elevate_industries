@@ -1,0 +1,191 @@
+{
+  "resources/js/MainApp.jsx": {
+    "file": "assets/MainApp-x56ZYZ_O.js",
+    "name": "MainApp",
+    "src": "resources/js/MainApp.jsx",
+    "isEntry": true,
+    "css": [
+      "assets/index-pVD8hxhD.css"
+    ],
+    "assets": [
+      "assets/logo-5KgAsPF_.jpeg",
+      "assets/parts-B4-r2sc3.jpeg",
+      "assets/brass-13-Dm1K1P9b.png",
+      "assets/brass-14-Dj1-TzCt.png",
+      "assets/brass-22-DaYBE9Er.png",
+      "assets/alu-15-DZjvjJQB.png",
+      "assets/alu-13-CD9Q0v8t.png",
+      "assets/alu-14-lN0cXtw8.png",
+      "assets/alu-16-D_rVp-FN.png",
+      "assets/alu-17-CQkStXoF.png",
+      "assets/alu-18-CwEGiEjY.png",
+      "assets/alu-19-C7Nv84Pd.png",
+      "assets/alu-20-Dh2z4h60.png",
+      "assets/alu-21-BpQzAlRr.png",
+      "assets/alu-22-Ccag0nJq.png",
+      "assets/alu-23-C_QzIfhY.png",
+      "assets/alu-24-o3Vk2I18.png",
+      "assets/brass-10-C8l0evIy.png",
+      "assets/brass-11-ja8hn7eL.png",
+      "assets/brass-12-B2sGBqTT.png",
+      "assets/brass-15-CbJ-ZrLe.png",
+      "assets/brass-16-Bv1V-qw8.png",
+      "assets/brass-17-BFhMEPQ7.png",
+      "assets/brass-18-DeA1fxX0.png",
+      "assets/brass-19-Cij72_P9.png",
+      "assets/brass-20-CRenKc90.png",
+      "assets/brass-21-Bfr9ve6s.png",
+      "assets/brass-23-DkJ4BBGd.png",
+      "assets/brass-24-D-uuyH9F.png",
+      "assets/brass-4-CDjzKBIm.png",
+      "assets/brass-5-D2SoIVJS.png",
+      "assets/brass-6-BTQjv3VU.png",
+      "assets/brass-8-BDFtc8SI.png",
+      "assets/brass-9-CrJnA2pj.png"
+    ]
+  },
+  "resources/js/assets/logo.jpeg": {
+    "file": "assets/logo-5KgAsPF_.jpeg",
+    "src": "resources/js/assets/logo.jpeg"
+  },
+  "resources/js/assets/parts.jpeg": {
+    "file": "assets/parts-B4-r2sc3.jpeg",
+    "src": "resources/js/assets/parts.jpeg"
+  },
+  "resources/js/assets/parts/alu-13.png": {
+    "file": "assets/alu-13-CD9Q0v8t.png",
+    "src": "resources/js/assets/parts/alu-13.png"
+  },
+  "resources/js/assets/parts/alu-14.png": {
+    "file": "assets/alu-14-lN0cXtw8.png",
+    "src": "resources/js/assets/parts/alu-14.png"
+  },
+  "resources/js/assets/parts/alu-15.png": {
+    "file": "assets/alu-15-DZjvjJQB.png",
+    "src": "resources/js/assets/parts/alu-15.png"
+  },
+  "resources/js/assets/parts/alu-16.png": {
+    "file": "assets/alu-16-D_rVp-FN.png",
+    "src": "resources/js/assets/parts/alu-16.png"
+  },
+  "resources/js/assets/parts/alu-17.png": {
+    "file": "assets/alu-17-CQkStXoF.png",
+    "src": "resources/js/assets/parts/alu-17.png"
+  },
+  "resources/js/assets/parts/alu-18.png": {
+    "file": "assets/alu-18-CwEGiEjY.png",
+    "src": "resources/js/assets/parts/alu-18.png"
+  },
+  "resources/js/assets/parts/alu-19.png": {
+    "file": "assets/alu-19-C7Nv84Pd.png",
+    "src": "resources/js/assets/parts/alu-19.png"
+  },
+  "resources/js/assets/parts/alu-20.png": {
+    "file": "assets/alu-20-Dh2z4h60.png",
+    "src": "resources/js/assets/parts/alu-20.png"
+  },
+  "resources/js/assets/parts/alu-21.png": {
+    "file": "assets/alu-21-BpQzAlRr.png",
+    "src": "resources/js/assets/parts/alu-21.png"
+  },
+  "resources/js/assets/parts/alu-22.png": {
+    "file": "assets/alu-22-Ccag0nJq.png",
+    "src": "resources/js/assets/parts/alu-22.png"
+  },
+  "resources/js/assets/parts/alu-23.png": {
+    "file": "assets/alu-23-C_QzIfhY.png",
+    "src": "resources/js/assets/parts/alu-23.png"
+  },
+  "resources/js/assets/parts/alu-24.png": {
+    "file": "assets/alu-24-o3Vk2I18.png",
+    "src": "resources/js/assets/parts/alu-24.png"
+  },
+  "resources/js/assets/parts/brass-10.png": {
+    "file": "assets/brass-10-C8l0evIy.png",
+    "src": "resources/js/assets/parts/brass-10.png"
+  },
+  "resources/js/assets/parts/brass-11.png": {
+    "file": "assets/brass-11-ja8hn7eL.png",
+    "src": "resources/js/assets/parts/brass-11.png"
+  },
+  "resources/js/assets/parts/brass-12.png": {
+    "file": "assets/brass-12-B2sGBqTT.png",
+    "src": "resources/js/assets/parts/brass-12.png"
+  },
+  "resources/js/assets/parts/brass-13.png": {
+    "file": "assets/brass-13-Dm1K1P9b.png",
+    "src": "resources/js/assets/parts/brass-13.png"
+  },
+  "resources/js/assets/parts/brass-14.png": {
+    "file": "assets/brass-14-Dj1-TzCt.png",
+    "src": "resources/js/assets/parts/brass-14.png"
+  },
+  "resources/js/assets/parts/brass-15.png": {
+    "file": "assets/brass-15-CbJ-ZrLe.png",
+    "src": "resources/js/assets/parts/brass-15.png"
+  },
+  "resources/js/assets/parts/brass-16.png": {
+    "file": "assets/brass-16-Bv1V-qw8.png",
+    "src": "resources/js/assets/parts/brass-16.png"
+  },
+  "resources/js/assets/parts/brass-17.png": {
+    "file": "assets/brass-17-BFhMEPQ7.png",
+    "src": "resources/js/assets/parts/brass-17.png"
+  },
+  "resources/js/assets/parts/brass-18.png": {
+    "file": "assets/brass-18-DeA1fxX0.png",
+    "src": "resources/js/assets/parts/brass-18.png"
+  },
+  "resources/js/assets/parts/brass-19.png": {
+    "file": "assets/brass-19-Cij72_P9.png",
+    "src": "resources/js/assets/parts/brass-19.png"
+  },
+  "resources/js/assets/parts/brass-20.png": {
+    "file": "assets/brass-20-CRenKc90.png",
+    "src": "resources/js/assets/parts/brass-20.png"
+  },
+  "resources/js/assets/parts/brass-21.png": {
+    "file": "assets/brass-21-Bfr9ve6s.png",
+    "src": "resources/js/assets/parts/brass-21.png"
+  },
+  "resources/js/assets/parts/brass-22.png": {
+    "file": "assets/brass-22-DaYBE9Er.png",
+    "src": "resources/js/assets/parts/brass-22.png"
+  },
+  "resources/js/assets/parts/brass-23.png": {
+    "file": "assets/brass-23-DkJ4BBGd.png",
+    "src": "resources/js/assets/parts/brass-23.png"
+  },
+  "resources/js/assets/parts/brass-24.png": {
+    "file": "assets/brass-24-D-uuyH9F.png",
+    "src": "resources/js/assets/parts/brass-24.png"
+  },
+  "resources/js/assets/parts/brass-4.png": {
+    "file": "assets/brass-4-CDjzKBIm.png",
+    "src": "resources/js/assets/parts/brass-4.png"
+  },
+  "resources/js/assets/parts/brass-5.png": {
+    "file": "assets/brass-5-D2SoIVJS.png",
+    "src": "resources/js/assets/parts/brass-5.png"
+  },
+  "resources/js/assets/parts/brass-6.png": {
+    "file": "assets/brass-6-BTQjv3VU.png",
+    "src": "resources/js/assets/parts/brass-6.png"
+  },
+  "resources/js/assets/parts/brass-8.png": {
+    "file": "assets/brass-8-BDFtc8SI.png",
+    "src": "resources/js/assets/parts/brass-8.png"
+  },
+  "resources/js/assets/parts/brass-9.png": {
+    "file": "assets/brass-9-CrJnA2pj.png",
+    "src": "resources/js/assets/parts/brass-9.png"
+  },
+  "resources/js/index.css": {
+    "file": "assets/index-pVD8hxhD.css",
+    "src": "resources/js/index.css",
+    "isEntry": true,
+    "names": [
+      "index.css"
+    ]
+  }
+}
