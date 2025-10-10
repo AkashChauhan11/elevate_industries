@@ -10,6 +10,9 @@ const Contact = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -17,19 +20,52 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch(
+        "https://elevateindustries.co.in/email/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN":
+              document
+                .querySelector('meta[name="csrf-token"]')
+                ?.getAttribute("content") || "",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({ type: "success", message: result.message });
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({ type: "error", message: result.message });
+      }
+    } catch (error) {
+      console.error("Contact form submit error:", error);
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Sorry, there was an error sending your message. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,7 +85,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Information & Form */}
-      <section className="section-padding" style={{ backgroundColor: '#fff8e8' }}>
+      <section
+        className="section-padding"
+        style={{ backgroundColor: "#fff8e8" }}
+      >
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -91,8 +130,8 @@ const Contact = () => {
                       Address
                     </h3>
                     <p className="text-gray-700">
-                      PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar,
-                      Gujarat, 361006
+                      PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar, Gujarat,
+                      361006
                     </p>
                   </div>
                 </div>
@@ -115,9 +154,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                    <p className="text-gray-700">
-                      +91 98248 95049
-                    </p>
+                    <p className="text-gray-700">+91 98248 95049</p>
                   </div>
                 </div>
 
@@ -139,9 +176,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                    <p className="text-gray-700">
-                      elevateind123@gmail.com
-                    </p>
+                    <p className="text-gray-700">elevateind123@gmail.com</p>
                   </div>
                 </div>
 
@@ -180,6 +215,20 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-6">
                 Send us a Message
               </h3>
+
+              {/* Status Message */}
+              {submitStatus && (
+                <div
+                  className={`mb-6 p-4 rounded-lg ${
+                    submitStatus.type === "success"
+                      ? "bg-green-100 border border-green-400 text-green-700"
+                      : "bg-red-100 border border-red-400 text-red-700"
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -196,7 +245,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="Your full name"
                     />
                   </div>
@@ -215,7 +264,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="your.email@company.com"
                     />
                   </div>
@@ -235,7 +284,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="Your company name"
                     />
                   </div>
@@ -253,7 +302,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-light-grey-300 rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -273,7 +322,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-light-grey-300 rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                     placeholder="What can we help you with?"
                   />
                 </div>
@@ -292,16 +341,47 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-light-grey-300 rounded-lg focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-light-grey-300 rounded-lg text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-warm-yellow-200 focus:border-transparent transition-all duration-300"
                     placeholder="Please describe your requirements in detail..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-warm-yellow-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-warm-yellow-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  disabled={isSubmitting}
+                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                    isSubmitting
+                      ? "bg-gray-400 text-gray-600 cursor-not-allowed"
+                      : "bg-warm-yellow-200 text-gray-800 hover:bg-warm-yellow-300"
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <svg
+                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Sending...
+                    </div>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </form>
             </div>
@@ -313,9 +393,7 @@ const Contact = () => {
       <section className="section-padding bg-light-grey-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Visit Us
-            </h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Visit Us</h2>
           </div>
 
           <div className="bg-light-grey-200 rounded-2xl h-96 flex items-center justify-center border border-warm-yellow-200 shadow-lg">
@@ -333,7 +411,9 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <p className="text-gray-600 font-medium">Interactive Map Coming Soon</p>
+              <p className="text-gray-600 font-medium">
+                Interactive Map Coming Soon
+              </p>
               <p className="text-sm text-gray-500">
                 PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar, Gujarat, 361006
               </p>

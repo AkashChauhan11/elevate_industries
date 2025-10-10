@@ -9,7 +9,7 @@ const About = () => {
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold mb-6">About Elevate Industries</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Leading the brass manufacturing industry with innovation, quality, and excellence for over 25 years
+            Leading manufacturer of brass and aluminum components with innovation, quality, and excellence for over 7 years
           </p>
         </div>
       </section>
@@ -21,35 +21,23 @@ const About = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Founded in 1998, Elevate Industries began as a small family-owned workshop with a vision 
-                to revolutionize brass manufacturing. What started with just three employees and a single 
-                production line has grown into a global enterprise serving industries worldwide.
+                Founded in 2018, Elevate Industries began with a vision to deliver precision brass and 
+                aluminum components for diverse industrial applications. What started as a specialized 
+                manufacturing unit has grown into a trusted partner for multiple industries.
               </p>
               <p className="text-lg text-gray-700 mb-6">
                 Our journey has been marked by continuous innovation, unwavering commitment to quality, 
-                and a deep understanding of our customers' needs. Today, we operate state-of-the-art 
-                manufacturing facilities across multiple continents, employing over 500 skilled professionals.
+                and a deep understanding of our customers' needs. Today, we operate modern manufacturing 
+                facilities equipped with advanced machinery and skilled professionals dedicated to excellence.
               </p>
               <p className="text-lg text-gray-700">
                 We remain true to our founding principles: exceptional craftsmanship, sustainable practices, 
-                and customer-centric solutions that elevate industries around the world.
+                and customer-centric solutions that elevate industries through superior brass and aluminum components.
               </p>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg p-8 border border-warm-yellow-200 shadow-xl">
-                <div className="text-center">
-                  <Logo className="w-24 h-24 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
-                  <p className="text-gray-700 mb-6">
-                    To provide innovative brass solutions that empower industries to achieve their highest potential 
-                    while maintaining the highest standards of quality and sustainability.
-                  </p>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
-                  <p className="text-gray-700">
-                    To be the global leader in brass manufacturing, setting industry standards for excellence, 
-                    innovation, and environmental responsibility.
-                  </p>
-                </div>
+              <div className="p-8 shadow-xl flex items-center justify-center min-h-96">
+                <Logo className="w-48 h-48 sm:w-64 sm:h-64 rounded-full" showText={false} />
               </div>
             </div>
           </div>
@@ -87,7 +75,7 @@ const About = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Innovation</h3>
               <p className="text-gray-600">
-                Continuously pushing boundaries to develop cutting-edge brass solutions
+                Continuously pushing boundaries to develop cutting-edge  solutions
               </p>
             </div>
             
@@ -128,48 +116,19 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-warm-yellow-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div className="flex justify-center">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-warm-yellow-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 max-w-sm">
               <div className="bg-warm-yellow-200 h-48 flex items-center justify-center">
                 <svg className="w-24 h-24 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">John Smith</h3>
-                <p className="text-warm-yellow-200 font-semibold mb-3">Chief Executive Officer</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">Hiren Gohil</h3>
+                <p className="text-warm-yellow-200 font-semibold mb-3">Owner & Founder</p>
                 <p className="text-gray-700">
-                  With over 20 years of experience in manufacturing, John leads our company with vision and expertise.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-warm-yellow-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-warm-yellow-200 h-48 flex items-center justify-center">
-                <svg className="w-24 h-24 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Sarah Johnson</h3>
-                <p className="text-warm-yellow-200 font-semibold mb-3">Chief Operations Officer</p>
-                <p className="text-gray-700">
-                  Sarah oversees all manufacturing operations, ensuring efficiency and quality across our facilities.
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-warm-yellow-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-warm-yellow-200 h-48 flex items-center justify-center">
-                <svg className="w-24 h-24 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Michael Chen</h3>
-                <p className="text-warm-yellow-200 font-semibold mb-3">Chief Technology Officer</p>
-                <p className="text-gray-700">
-                  Michael drives innovation and technology adoption across our manufacturing processes.
+                  Hiren founded Elevate Industries with a vision to deliver exceptional brass and aluminum components. 
+                  His leadership and expertise drive our commitment to quality and innovation in manufacturing.
                 </p>
               </div>
             </div>
@@ -182,19 +141,19 @@ const About = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="bg-cream-white-50 p-6 rounded-2xl shadow-lg border border-warm-yellow-300">
-              <div className="text-4xl font-bold mb-2 text-gray-800">25+</div>
+              <div className="text-4xl font-bold mb-2 text-gray-800">8+</div>
               <div className="text-gray-700 font-semibold">Years of Experience</div>
             </div>
             <div className="bg-cream-white-50 p-6 rounded-2xl shadow-lg border border-warm-yellow-300">
-              <div className="text-4xl font-bold mb-2 text-gray-800">500+</div>
-              <div className="text-gray-700 font-semibold">Employees Worldwide</div>
+              <div className="text-4xl font-bold mb-2 text-gray-800">25+</div>
+              <div className="text-gray-700 font-semibold">Employees</div>
             </div>
             <div className="bg-cream-white-50 p-6 rounded-2xl shadow-lg border border-warm-yellow-300">
               <div className="text-4xl font-bold mb-2 text-gray-800">50+</div>
               <div className="text-gray-700 font-semibold">Countries Served</div>
             </div>
             <div className="bg-cream-white-50 p-6 rounded-2xl shadow-lg border border-warm-yellow-300">
-              <div className="text-4xl font-bold mb-2 text-gray-800">1000+</div>
+              <div className="text-4xl font-bold mb-2 text-gray-800">50+</div>
               <div className="text-gray-700 font-semibold">Products Manufactured</div>
             </div>
           </div>
