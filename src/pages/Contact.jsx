@@ -104,7 +104,7 @@ const Contact = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 flex-shrink-0 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-gray-800"
                       fill="none"
@@ -130,14 +130,13 @@ const Contact = () => {
                       Address
                     </h3>
                     <p className="text-gray-700">
-                      PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar, Gujarat,
-                      361006
+                      568, Senor Metal Chokdi, Dared GIDC Phase-2, Jamnagar, Gujarat - 361004, India
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 flex-shrink-0 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-gray-800"
                       fill="none"
@@ -159,7 +158,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 flex-shrink-0 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-gray-800"
                       fill="none"
@@ -181,7 +180,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
+                  <div className="w-12 h-12 flex-shrink-0 bg-warm-yellow-200 rounded-lg flex items-center justify-center mr-4 shadow-lg">
                     <svg
                       className="w-6 h-6 text-gray-800"
                       fill="none"
@@ -219,11 +218,10 @@ const Contact = () => {
               {/* Status Message */}
               {submitStatus && (
                 <div
-                  className={`mb-6 p-4 rounded-lg ${
-                    submitStatus.type === "success"
-                      ? "bg-green-100 border border-green-400 text-green-700"
-                      : "bg-red-100 border border-red-400 text-red-700"
-                  }`}
+                  className={`mb-6 p-4 rounded-lg ${submitStatus.type === "success"
+                    ? "bg-green-100 border border-green-400 text-green-700"
+                    : "bg-red-100 border border-red-400 text-red-700"
+                    }`}
                 >
                   {submitStatus.message}
                 </div>
@@ -349,11 +347,10 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
-                    isSubmitting
-                      ? "bg-gray-400 text-gray-600 cursor-not-allowed"
-                      : "bg-warm-yellow-200 text-gray-800 hover:bg-warm-yellow-300"
-                  }`}
+                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${isSubmitting
+                    ? "bg-gray-400 text-gray-600 cursor-not-allowed"
+                    : "bg-warm-yellow-200 text-gray-800 hover:bg-warm-yellow-300"
+                    }`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
@@ -394,30 +391,22 @@ const Contact = () => {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Visit Us</h2>
+            <p className="text-lg text-gray-600">
+              568, Senor Metal Chokdi, Dared GIDC Phase-2, Jamnagar, Gujarat - 361004, India
+            </p>
           </div>
 
-          <div className="bg-light-grey-200 rounded-2xl h-96 flex items-center justify-center border border-warm-yellow-200 shadow-lg">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-warm-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <svg
-                  className="w-8 h-8 text-gray-800"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p className="text-gray-600 font-medium">
-                Interactive Map Coming Soon
-              </p>
-              <p className="text-sm text-gray-500">
-                PLOT NO-224, GIDC, PHASE-II, DARED, Jamnagar, Gujarat, 361006
-              </p>
-            </div>
+          <div className="rounded-2xl overflow-hidden border border-warm-yellow-200 shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.4371260217413!2d70.05326367507276!3d22.412567379606035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39576b4a2ca34ff9%3A0x67dd08162651d0a3!2s568%2C%20G.I.D.C.%20Phase%202%2C%20GIDC%20Phase-2%2C%20Dared%2C%20Jamnagar%2C%20Gujarat%20361012!5e0!3m2!1sen!2sin!4v1767094087134!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Elevate Industries Location - 568, GIDC Phase-2, Dared, Jamnagar"
+            ></iframe>
           </div>
         </div>
       </section>

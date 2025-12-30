@@ -22,7 +22,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <Logo className="w-16 h-16" />
+            <Logo className="w-16 h-16" showText={true} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -31,11 +31,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-semibold transition-colors duration-300 ${
-                  isActive(item.path)
-                    ? 'text-warm-yellow-200 border-b-2 border-warm-yellow-200'
-                    : 'text-cream-white-100 hover:text-warm-yellow-200'
-                }`}
+                className={`font-semibold transition-colors duration-300 ${isActive(item.path)
+                  ? 'text-warm-yellow-200 border-b-2 border-warm-yellow-200'
+                  : 'text-cream-white-100 hover:text-warm-yellow-200'
+                  }`}
               >
                 {item.name}
               </Link>
@@ -66,11 +65,10 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`font-semibold transition-colors duration-300 ${
-                    isActive(item.path)
-                      ? 'text-warm-yellow-200'
-                      : 'text-cream-white-100 hover:text-warm-yellow-200'
-                  }`}
+                  className={`font-semibold transition-colors duration-300 ${isActive(item.path)
+                    ? 'text-warm-yellow-200'
+                    : 'text-cream-white-100 hover:text-warm-yellow-200'
+                    }`}
                 >
                   {item.name}
                 </Link>
