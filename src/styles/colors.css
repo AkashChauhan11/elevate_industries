@@ -1,20 +1,42 @@
 :root {
-  /* Natural Palette Colors */
+  /* Natural Palette Colors (legacy — kept for compatibility) */
   --color-warm-yellow: #FFD775;
   --color-earth-brown: #A28E65;
   --color-cream-white: #FFF8EA;
   --color-light-grey: #DFE0DF;
-  
+
+  /* ============================================================
+     Warm Refined palette (2026 redesign)
+     Brass accents · espresso ink · cream grounds
+     ============================================================ */
+  --brass-light: #E6C068;
+  --brass: #C99A3B;
+  --brass-dark: #A67C2A;
+  --brass-deep: #82601F;
+
+  --espresso: #3A2E22;
+  --espresso-800: #2C231A;
+  --espresso-900: #1E1813;
+  --espresso-700: #4A3B2C;
+
+  --clay: #6B5B47;        /* body text */
+  --clay-light: #8B7B63;  /* muted text */
+
+  --cream: #FBF7EF;       /* primary background */
+  --cream-200: #F3EAD7;   /* deeper cream */
+  --cream-300: #ECDFC8;
+  --line: #E8DDC7;        /* hairline borders */
+
   /* Semantic Color Mappings */
-  --color-primary: var(--color-warm-yellow);
-  --color-secondary: var(--color-earth-brown);
-  --color-background: var(--color-cream-white);
-  --color-surface: var(--color-light-grey);
-  --color-text-primary: var(--color-earth-brown);
-  --color-text-secondary: var(--color-warm-yellow);
-  --color-accent: var(--color-warm-yellow);
-  
-  /* Additional variations for flexibility */
+  --color-primary: var(--brass);
+  --color-secondary: var(--espresso);
+  --color-background: var(--cream);
+  --color-surface: #ffffff;
+  --color-text-primary: var(--espresso);
+  --color-text-secondary: var(--clay);
+  --color-accent: var(--brass);
+
+  /* Additional legacy variations (kept) */
   --color-warm-yellow-light: #FFE5A3;
   --color-warm-yellow-dark: #E6C25F;
   --color-earth-brown-light: #B8A47A;
@@ -22,13 +44,3 @@
   --color-cream-white-dark: #F5F0E0;
   --color-light-grey-dark: #C8C9C8;
 }
-
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--color-earth-brown-dark);
-    --color-surface: var(--color-earth-brown);
-    --color-text-primary: var(--color-cream-white);
-    --color-text-secondary: var(--color-warm-yellow);
-  }
-} 

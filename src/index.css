@@ -7,60 +7,118 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    background-color: var(--cream);
+    color: var(--espresso);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
+
+  /* Display headings default to the serif; override per-element where needed */
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, Cambria, serif;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--brass-light);
+    color: var(--espresso-900);
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar { width: 12px; }
+  ::-webkit-scrollbar-track { background: var(--cream-200); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--brass-dark);
+    border: 3px solid var(--cream-200);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--brass-deep); }
 }
 
 @layer components {
+  /* ---------- Buttons ---------- */
   .btn-primary {
-    @apply bg-warm-yellow-200 hover:bg-warm-yellow-300 text-earth-brown-800 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply inline-flex items-center justify-center gap-2 bg-espresso text-cream font-semibold py-3.5 px-7 rounded-xl transition-all duration-300 shadow-warm hover:bg-espresso-800 hover:shadow-warm-lg hover:-translate-y-0.5;
   }
-  
+
   .btn-secondary {
-    @apply bg-transparent border-2 border-warm-yellow-200 text-warm-yellow-200 hover:bg-warm-yellow-200 hover:text-earth-brown-800 font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 bg-transparent border-2 border-brass text-espresso font-semibold py-3 px-7 rounded-xl transition-all duration-300 hover:bg-brass hover:text-espresso-900 hover:-translate-y-0.5;
   }
-  
+
+  /* Gold button for use on dark/espresso backgrounds */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-brass-gradient text-espresso-900 font-semibold py-3.5 px-7 rounded-xl transition-all duration-300 shadow-brass hover:brightness-105 hover:-translate-y-0.5;
+  }
+
+  /* ---------- Layout ---------- */
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-20 md:py-28 px-5 sm:px-6 lg:px-8;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
-  
-  .text-warm-yellow {
-    @apply text-warm-yellow-200;
+
+  /* ---------- Editorial bits ---------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-brass-dark;
   }
-  
-  .bg-warm-yellow {
-    @apply bg-warm-yellow-200;
+
+  .eyebrow::before {
+    content: '';
+    @apply inline-block w-6 h-px bg-brass;
   }
-  
-  .border-warm-yellow {
-    @apply border-warm-yellow-200;
+
+  .eyebrow.no-rule::before { content: none; }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl font-bold text-espresso leading-[1.08];
   }
-  
-  .text-earth-brown {
-    @apply text-earth-brown-500;
+
+  .lead {
+    @apply text-clay text-lg leading-relaxed;
   }
-  
-  .bg-earth-brown {
-    @apply bg-earth-brown-500;
+
+  /* ---------- Surfaces ---------- */
+  .card {
+    @apply bg-white rounded-2xl border border-line shadow-warm transition-all duration-300;
   }
-  
-  .border-earth-brown {
-    @apply border-earth-brown-500;
+
+  .card-hover {
+    @apply hover:shadow-warm-lg hover:-translate-y-1.5;
   }
-  
-  .bg-cream-white {
-    @apply bg-cream-white-100;
+
+  /* ---------- Forms ---------- */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl bg-cream border border-line text-espresso placeholder-clay-light/70 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brass/60 focus:border-transparent focus:bg-white;
   }
-  
-  .bg-light-grey {
-    @apply bg-light-grey-400;
+
+  .label-field {
+    @apply block text-sm font-semibold text-espresso mb-2;
   }
+}
+
+@layer utilities {
+  /* Subtle dotted grain for atmospheric backgrounds */
+  .bg-dots {
+    background-image: radial-gradient(rgba(166, 124, 42, 0.10) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Slow cinematic zoom for the active hero slide */
+  @keyframes kenburns {
+    from { transform: scale(1.001); }
+    to   { transform: scale(1.09); }
+  }
+  .kenburns-active { animation: kenburns 7s ease-out forwards; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kenburns-active { animation: none; }
+  }
+
+  /* Faint engraved wordmark texture */
+  .text-balance { text-wrap: balance; }
 }

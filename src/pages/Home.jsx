@@ -1,546 +1,338 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Carousel from '../components/Carousel';
+import HeroCarousel from '../components/HeroCarousel';
 import partsImage from '../assets/parts.jpeg';
 import logoImage from '../assets/logo.jpeg';
+import brassHero from '../assets/hero/brass.jpg';
+import aluHero from '../assets/hero/aluminum.jpg';
+import ssHero from '../assets/hero/ss.jpg';
 import brass13 from '../assets/parts/brass-13.png';
 import brass14 from '../assets/parts/brass-14.png';
-import brass22 from '../assets/parts/brass-22.png';
 import alu15 from '../assets/parts/alu-15.png';
 
+// ---- Shared motion variants -------------------------------------------------
+const fadeUp = {
+  hidden: { y: 28, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
+const stagger = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
+};
+
 const Home = () => {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-      }
-    },
-    hover: {
-      scale: 1.05,
-      y: -10,
-      transition: {
-        duration: 0.1,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const heroVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.3
-      }
-    }
-  };
-
-  const textVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const productCardVariants = {
-    hidden: { x: 50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    },
-    hover: {
-      scale: 1.05,
-      y: -5,
-      transition: {
-        duration: 0.2
-      }
-    }
-  };
+  const stats = [
+    { value: '7+', label: 'Years Experience' },
+    { value: '25+', label: 'Employees' },
+    { value: '50+', label: 'Countries Served' },
+    { value: '50+', label: 'Products' },
+  ];
 
   const whyChooseUsItems = [
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "7+ Years of Excellence",
-      description: "Year of experience in brass and aluminum manufacturing with proven track record of delivering quality products."
+      title: '7+ Years of Excellence',
+      description: 'Year of experience in brass and aluminum manufacturing with proven track record of delivering quality products.',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
-      title: "ISO Certified Quality",
-      description: "International quality standards compliance ensuring consistent excellence in every product."
+      title: 'ISO Certified Quality',
+      description: 'International quality standards compliance ensuring consistent excellence in every product.',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
         </svg>
       ),
-      title: "Large Supply Network",
-      description: "Large distribution capabilities ensuring timely delivery to any location."
+      title: 'Large Supply Network',
+      description: 'Large distribution capabilities ensuring timely delivery to any location.',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      title: "Custom Solutions",
-      description: "Tailored manufacturing solutions designed to meet your specific requirements and industry standards."
+      title: 'Custom Solutions',
+      description: 'Tailored manufacturing solutions designed to meet your specific requirements and industry standards.',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: "Innovation & Technology",
-      description: "State-of-the-art manufacturing facilities and cutting-edge technology for superior product quality."
+      title: 'Innovation & Technology',
+      description: 'State-of-the-art manufacturing facilities and cutting-edge technology for superior product quality.',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
-      title: "Expert Workers",
-      description: "Expert workers and skilled craftsmen dedicated to delivering finest quality and precision in every brass and aluminum component."
-    }
+      title: 'Expert Workers',
+      description: 'Expert workers and skilled craftsmen dedicated to delivering finest quality and precision in every brass and aluminum component.',
+    },
   ];
 
+  const services = [
+    {
+      title: 'Custom Manufacturing',
+      description: 'Tailored brass solutions designed to meet your specific requirements and industry standards.',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Quality Assurance',
+      description: 'Rigorous testing and quality control processes ensure every product meets our high standards.',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Global Distribution',
+      description: 'Efficient logistics and worldwide distribution network for timely delivery to your location.',
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+        </svg>
+      ),
+    },
+  ];
+
+  const heroSlides = [
+    { img: partsImage, name: 'Precision Components', short: 'Overview', alt: 'Assorted precision brass and aluminum components' },
+    { img: brassHero, name: 'Brass Parts', short: 'Brass', alt: 'Machined golden brass components' },
+    { img: aluHero, name: 'Aluminum Parts', short: 'Aluminum', alt: 'Silver machined aluminum components' },
+    { img: ssHero, name: 'MS / SS Parts', short: 'MS / SS', alt: 'Stainless and mild steel components' },
+  ];
+
+  const topProducts = [brass13, alu15, brass14];
+
   return (
-    <div className="bg-cream-white-100">
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-cream-white-50 to-warm-yellow-100 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ctext x='30' y='30' text-anchor='middle' font-family='Arial' font-size='12'%3EELEVATE%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat'
-          }}></div>
-        </div>
-
-        <div className="container-custom relative z-10">
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-screen p-6 lg:py-20 px-6 lg:px-0"
-            variants={heroVariants}
-            initial="hidden"
-            animate="visible"
+    <div className="bg-cream">
+      {/* ============================= HERO (cinematic carousel) ============================= */}
+      <HeroCarousel slides={heroSlides} href="/products">
+        <motion.div initial="hidden" animate="visible" variants={stagger}>
+          <motion.span variants={fadeUp} className="eyebrow !text-brass-light mb-6">
+            ISO 9001:2015 · ZED Bronze Certified
+          </motion.span>
+          <motion.h1
+            variants={fadeUp}
+            className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-cream leading-[1.04] mt-5 mb-6 text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
           >
-            {/* Left Panel - Product Display */}
-            <motion.div 
-              className="lg:col-span-5"
-              variants={itemVariants}
-            >
-              <motion.div 
-                className="bg-cream-white-50 rounded-3xl p-8 shadow-2xl border border-warm-yellow-200"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                                <motion.div
-                  className="flex justify-center"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                >
-                  {/* Parts Image */}
-                  <motion.img
-                    src={partsImage}
-                    alt="Industrial Parts"
-                    className="max-w-full h-auto rounded-lg shadow-lg"
-                    initial={{ scale: 0, rotate: -10 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ 
-                      delay: 0.6, 
-                      duration: 0.6,
-                      type: "spring",
-                      stiffness: 200
-                    }}
-                    whileHover={{ 
-                      scale: 1.05, 
-                      transition: { duration: 0.3 }
-                    }}
-                  />
-                </motion.div>
-              </motion.div>
-            </motion.div>
-
-            {/* Center Panel - Company Info */}
-            <motion.div 
-              className="lg:col-span-4 text-center"
-              variants={itemVariants}
-            >
-              <motion.div variants={textVariants}>
-                <h1 className="text-5xl lg:text-7xl font-bold text-earth-brown-800 mb-6 font-serif">
-                  Elevate Industries
-                </h1>
-              </motion.div>
-              
-              <motion.div variants={textVariants}>
-                <p className="text-xl lg:text-2xl text-earth-brown-600 mb-8 max-w-md mx-auto">
-                  Ready to elevate your projects with premium brass components?
-                </p>
-              </motion.div>
-
-            </motion.div>
-
-            {/* Right Panel - Product Categories */}
-            <motion.div 
-              className="lg:col-span-3 space-y-6"
-              variants={itemVariants}
-            >
-              {/* Brass Inserts */}
-              <motion.div 
-                className="bg-cream-white-50 rounded-2xl p-6 shadow-xl border border-warm-yellow-200"
-                variants={productCardVariants}
-                whileHover="hover"
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-warm-yellow-400 to-warm-yellow-600 rounded-xl mb-4 flex items-center justify-center"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="w-8 h-8 bg-warm-yellow-200 rounded-full"></div>
-                </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Brass Parts</h3>
-                {/* <p className="text-sm text-earth-brown-600">Precision threaded components</p> */}
-              </motion.div>
-
-              {/* Brass Fasteners */}
-              <motion.div 
-                className="bg-cream-white-50 rounded-2xl p-6 shadow-xl border border-warm-yellow-200"
-                variants={productCardVariants}
-                whileHover="hover"
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-light-grey-400 to-light-grey-600 rounded-xl mb-4 flex items-center justify-center"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="w-6 h-6 bg-light-grey-300 rounded-full"></div>
-                </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">Aluminum Parts</h3>
-                {/* <p className="text-sm text-earth-brown-600">Industrial strength hardware</p> */}
-              </motion.div>
-
-              {/* Brass Valves */}
-              <motion.div 
-                className="bg-cream-white-50 rounded-2xl p-6 shadow-xl border border-warm-yellow-200"
-                variants={productCardVariants}
-                whileHover="hover"
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-gradient-to-br from-earth-brown-400 to-earth-brown-600 rounded-xl mb-4 flex items-center justify-center"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="w-8 h-8 bg-earth-brown-300 rounded-lg"></div>
-                </motion.div>
-                <h3 className="text-lg font-semibold text-earth-brown-800 mb-2">MS/SS Parts</h3>
-                {/* <p className="text-sm text-earth-brown-600">Flow control solutions</p> */}
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          {/* CTA Button */}
-          <motion.div 
-            className="flex justify-center my-2 lg:mt-8 lg:absolute lg:bottom-8 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:mt-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
+            Elevate <span className="italic text-brass-light">Industries</span>
+          </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            className="text-cream/90 text-lg sm:text-xl max-w-xl mb-9 leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]"
           >
-            <Link to="/products" className="btn-primary text-sm px-4 py-3 sm:px-6 sm:py-3">
+            Ready to elevate your projects with premium brass components?
+          </motion.p>
+          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-4 pointer-events-auto">
+            <Link to="/products" className="btn-gold">
               Explore Our Products
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream font-semibold py-3 px-7 rounded-xl transition-all duration-300 hover:bg-cream hover:text-espresso-900 hover:-translate-y-0.5"
+            >
+              Get in Touch
             </Link>
           </motion.div>
-        </div>
-      </section>
+        </motion.div>
+      </HeroCarousel>
 
-      {/* About Section */}
-      <section className="section-padding bg-cream-white-100">
-        <div className="container-custom">
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-            variants={containerVariants}
+      {/* ============================= TRUST STRIP ============================= */}
+      <section className="bg-espresso-900 relative overflow-hidden">
+        <div className="h-px w-full bg-brass-gradient opacity-60" />
+        <div className="container-custom px-5 sm:px-6 lg:px-8 py-10">
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Left Panel - Logo */}
-            <motion.div 
-              className="flex justify-center"
-              variants={itemVariants}
-            >
-              <motion.div 
-                className="relative"
-                 
-                whileHover="hover"
-                initial={{ scale: 0, rotate: 180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.6, duration: 0.9, type: "spring" }}
-              >
-                {/* Logo Image */}
-                <img 
-                  src={logoImage} 
-                  alt="Elevate Industries Logo" 
-                  className="w-56 h-56 sm:w-96 sm:h-96 object-contain border-0 outline-none rounded-2xl"
-                />
+            {stats.map((s) => (
+              <motion.div key={s.label} variants={fadeUp} className="text-center">
+                <div className="font-serif text-4xl md:text-5xl font-bold text-brass-light">{s.value}</div>
+                <div className="text-cream/70 text-sm font-medium mt-1 tracking-wide">{s.label}</div>
               </motion.div>
+            ))}
+          </motion.div>
+        </div>
+        <div className="h-px w-full bg-brass-gradient opacity-60" />
+      </section>
+
+      {/* ============================= ABOUT ============================= */}
+      <section className="section-padding bg-cream">
+        <div className="container-custom">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Logo */}
+            <motion.div className="flex justify-center" variants={fadeUp}>
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full bg-brass-gradient opacity-20 blur-2xl" />
+                <img
+                  src={logoImage}
+                  alt="Elevate Industries Logo"
+                  className="relative w-60 h-60 sm:w-80 sm:h-80 object-contain rounded-3xl"
+                />
+              </div>
             </motion.div>
 
-            {/* Right Panel - Content */}
-            <motion.div 
-              className="space-y-8"
-              variants={itemVariants}
-            >
-              {/* Headings */}
-              <motion.div 
-                className="space-y-4"
-                variants={textVariants}
-              >
-                <div className="flex items-center space-x-6">
-                                  <h2 className="text-3xl font-serif font-bold text-earth-brown-800 bg-warm-yellow-200 px-4 py-2 rounded">
-                  About Us
-                </h2>
-                  
-                </div>
-                <div className="flex items-center space-x-6">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
-                    <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
-                    <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
-                  </div>
-                  <div className="w-16 h-0.5 bg-gray-900"></div>
-                </div>
-              </motion.div>
-
-              {/* Content */}
-              <motion.div 
-                className="space-y-6"
-                variants={textVariants}
-              >
-                <p className="text-lg text-earth-brown-700 leading-relaxed">
-                  Elevate Industries is a premier manufacturer specializing in precision brass and 
-                  aluminum components for diverse industrial applications. With our advanced 
-                  manufacturing capabilities, we produce high-quality fittings, hardware, and 
-                  custom components that meet the most demanding specifications across various sectors.
-                </p>
-                <p className="text-lg text-earth-brown-700 leading-relaxed">
-                  Our comprehensive product range includes brass hardware fittings, aluminum 
-                  components, and specialized metal parts for construction, automotive, electrical, 
-                  and industrial applications. We serve clients across India with our commitment 
-                  to delivering superior quality products through advanced manufacturing processes, 
-                  strict quality control, and precision engineering excellence.
-                </p>
-              </motion.div>
-
-              {/* Know More Button */}
-              <motion.div
-                variants={textVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link to="/about" className="inline-flex items-center bg-earth-brown-800 text-cream-white-100 px-6 py-3 rounded-lg font-semibold hover:bg-earth-brown-700 transition-colors duration-300 shadow-lg">
-                  Know More
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </motion.div>
+            {/* Content */}
+            <motion.div className="space-y-7" variants={fadeUp}>
+              <span className="eyebrow">About Us</span>
+              <h2 className="section-title">
+                Crafting precision in <span className="italic text-brass-dark">brass &amp; aluminum</span>
+              </h2>
+              <p className="lead">
+                Elevate Industries is a premier manufacturer specializing in precision brass and
+                aluminum components for diverse industrial applications. With our advanced
+                manufacturing capabilities, we produce high-quality fittings, hardware, and
+                custom components that meet the most demanding specifications across various sectors.
+              </p>
+              <p className="lead">
+                Our comprehensive product range includes brass hardware fittings, aluminum
+                components, and specialized metal parts for construction, automotive, electrical,
+                and industrial applications. We serve clients across India with our commitment
+                to delivering superior quality products through advanced manufacturing processes,
+                strict quality control, and precision engineering excellence.
+              </p>
+              <Link to="/about" className="btn-primary">
+                Know More
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="section-padding bg-gradient-to-br from-light-grey-50 to-cream-white-100">
+      {/* ============================= WHY CHOOSE US ============================= */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            className="text-center max-w-3xl mx-auto mb-16"
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">Why Choose Us</h2>
-            <p className="text-lg text-earth-brown-600 max-w-3xl mx-auto">
-              Discover what sets Elevate Industries apart from the competition. Our commitment to excellence, 
+            <span className="eyebrow no-rule mb-4">Why Choose Us</span>
+            <h2 className="section-title mt-4 mb-5">Built on precision &amp; trust</h2>
+            <p className="lead">
+              Discover what sets Elevate Industries apart from the competition. Our commitment to excellence,
               innovation, and customer satisfaction drives everything we do.
             </p>
           </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
+            variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             {whyChooseUsItems.map((item, index) => (
-              <motion.div 
-                key={index} 
-                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group"
-                variants={cardVariants}
-                whileHover="hover"
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                whileHover={{ y: -8 }}
+                className="card card-hover p-8 group"
               >
-                <motion.div 
-                  className="w-16 h-16 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-6 group-hover:bg-warm-yellow-300 transition-colors duration-300 shadow-lg"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                                  <div className="text-earth-brown-800">
+                <div className="w-14 h-14 rounded-2xl bg-cream-200 text-brass-dark flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-brass-gradient group-hover:text-espresso-900">
                   {item.icon}
                 </div>
-                </motion.div>
-                <h3 className="text-xl font-semibold mb-4 text-earth-brown-800 group-hover:text-warm-yellow-200 transition-colors duration-300">
-                  {item.title}
-                </h3>
-                <p className="text-earth-brown-600 leading-relaxed">
-                  {item.description}
-                </p>
+                <h3 className="font-serif text-xl font-bold text-espresso mb-3">{item.title}</h3>
+                <p className="text-clay leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Top Products Section */}
-      <section className="section-padding bg-gradient-to-br from-warm-yellow-50 to-cream-white-100">
+      {/* ============================= TOP PRODUCTS ============================= */}
+      <section className="section-padding bg-cream">
         <div className="container-custom">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            className="text-center max-w-2xl mx-auto mb-14"
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">Top Products</h2>
-            <p className="text-lg text-earth-brown-600 max-w-2xl mx-auto">
+            <span className="eyebrow no-rule mb-4">Top Products</span>
+            <h2 className="section-title mt-4 mb-5">Components trusted worldwide</h2>
+            <p className="lead">
               Discover our most popular brass and aluminum components trusted by industries worldwide
             </p>
           </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-7"
+            variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Brass Compression Fittings */}
-            <motion.div 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-yellow-100 hover:scale-105"
-              variants={cardVariants}
-              whileHover="hover"
-            >
-              <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
+            {topProducts.map((img, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                whileHover={{ y: -8 }}
+                className="card card-hover overflow-hidden group"
+              >
+                <div className="h-56 flex items-center justify-center bg-light-grey-400 overflow-hidden">
                   <img
-            src={alu15}
-            alt={'Brass Ball Valves'}
-            className="object-contain h-full w-full"
-          />
-              </div>
-              {/* <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold text-gray-800">Brass Compression Fittings</h3>
-              </div> */}
-            </motion.div>
-
-            {/* Aluminum Extruded Profiles */}
-            <motion.div 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-yellow-100 hover:scale-105"
-              variants={cardVariants}
-              whileHover="hover"
-            >
-              <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
-                  <img
-            src={brass13}
-            alt={'Brass Ball Valves'}
-            className="object-contain h-full w-full"
-          />
-              </div>
-              {/* <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold text-gray-800">Aluminum Extruded Profiles</h3>
-              </div> */}
-            </motion.div>
-
-            {/* Brass Ball Valves */}
-            <motion.div 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-yellow-100 hover:scale-105"
-              variants={cardVariants}
-              whileHover="hover"
-            >
-              <div className="h-48 flex items-center justify-center" style={{ backgroundColor: '#dfe0df' }}>
-         <img
-            src={brass14}
-            alt={'Brass Ball Valves'}
-            className="object-contain h-full w-full"
-          />
-              </div>
-              {/* <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold text-gray-800">Brass Ball Valves</h3>
-              </div> */}
-            </motion.div>
+                    src={img}
+                    alt="Featured product"
+                    className="object-contain h-full w-full p-6 transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
 
-          {/* See All Button */}
-          <motion.div 
+          <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link 
-              to="/products" 
-              className="inline-flex items-center bg-earth-brown-800 text-cream-white-100 px-8 py-4 rounded-lg font-semibold hover:bg-earth-brown-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
+            <Link to="/products" className="btn-primary">
               See All Products
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
@@ -548,138 +340,80 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="section-padding bg-gradient-to-br from-light-grey-50 to-cream-white-100">
+      {/* ============================= SERVICES ============================= */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            className="text-center max-w-2xl mx-auto mb-14"
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">Our Services</h2>
-            <p className="text-lg text-earth-brown-600 max-w-2xl mx-auto">
+            <span className="eyebrow no-rule mb-4">Our Services</span>
+            <h2 className="section-title mt-4 mb-5">Solutions tailored to industry</h2>
+            <p className="lead">
               Comprehensive brass manufacturing solutions tailored to your industry needs
             </p>
           </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={containerVariants}
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-7"
+            variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div 
-              className="bg-cream-white-50 p-6 rounded-2xl shadow-xl border border-warm-yellow-100 hover:shadow-2xl transition-all duration-300"
-              variants={cardVariants}
-              whileHover="hover"
-            >
-              <motion.div 
-                className="w-12 h-12 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-4 shadow-lg"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                whileHover={{ y: -8 }}
+                className="card card-hover p-8"
               >
-                <svg className="w-6 h-6 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
+                <div className="w-12 h-12 rounded-xl bg-brass-gradient text-espresso-900 flex items-center justify-center mb-5 shadow-brass">
+                  {service.icon}
+                </div>
+                <h3 className="font-serif text-xl font-bold text-espresso mb-3">{service.title}</h3>
+                <p className="text-clay leading-relaxed">{service.description}</p>
               </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-earth-brown-800">Custom Manufacturing</h3>
-              <p className="text-earth-brown-600">
-                Tailored brass solutions designed to meet your specific requirements and industry standards.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-cream-white-50 p-6 rounded-2xl shadow-xl border border-warm-yellow-100 hover:shadow-2xl transition-all duration-300"
-              variants={cardVariants}
-              whileHover="hover"
-            >
-              <motion.div 
-                className="w-12 h-12 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-4 shadow-lg"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <svg className="w-6 h-6 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-earth-brown-800">Quality Assurance</h3>
-              <p className="text-earth-brown-600">
-                Rigorous testing and quality control processes ensure every product meets our high standards.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-cream-white-50 p-6 rounded-2xl shadow-xl border border-warm-yellow-100 hover:shadow-2xl transition-all duration-300"
-              variants={cardVariants}
-              whileHover="hover"
-            >
-              <motion.div 
-                className="w-12 h-12 bg-warm-yellow-200 rounded-xl flex items-center justify-center mb-4 shadow-lg"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <svg className="w-6 h-6 text-earth-brown-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                </svg>
-              </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-earth-brown-800">Global Distribution</h3>
-              <p className="text-earth-brown-600">
-                Efficient logistics and worldwide distribution network for timely delivery to your location.
-              </p>
-            </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-warm-yellow-200">
-        <motion.div 
-          className="container-custom text-center"
-          initial={{ opacity: 0, scale: 0.9 }}
+      {/* ============================= CTA ============================= */}
+      <section className="relative section-padding bg-espresso-900 overflow-hidden">
+        <div className="absolute inset-0 bg-dots opacity-40 pointer-events-none" />
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] rounded-full bg-brass/10 blur-3xl pointer-events-none" />
+        <motion.div
+          className="container-custom text-center relative z-10"
+          initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-earth-brown-800 mb-4">
+          <span className="eyebrow no-rule mb-4 !text-brass-light">Let's Build Together</span>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-cream mt-4 mb-5">
             Ready to Elevate Your Project?
           </h2>
-          <p className="text-xl text-earth-brown-700 mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your brass manufacturing needs and discover how we can help 
+          <p className="text-cream/75 text-lg max-w-2xl mx-auto mb-10">
+            Contact us today to discuss your brass manufacturing needs and discover how we can help
             bring your vision to life.
           </p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-6 sm:gap-4 justify-center"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="btn-gold">Get in Touch</Link>
+            <Link
+              to="/products"
+              className="inline-flex items-center justify-center gap-2 border-2 border-cream/30 text-cream font-semibold py-3 px-7 rounded-xl transition-all duration-300 hover:bg-cream hover:text-espresso-900 hover:-translate-y-0.5"
             >
-              <Link to="/contact" className="btn-secondary bg-earth-brown-800 text-warm-yellow-200 border-earth-brown-800 hover:bg-earth-brown-700 shadow-lg">
-                Get in Touch
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link to="/products" className="btn-secondary border-earth-brown-800 text-earth-brown-800 hover:bg-earth-brown-800 hover:text-warm-yellow-200 shadow-lg">
-                View Products
-              </Link>
-            </motion.div>
-          </motion.div>
+              View Products
+            </Link>
+          </div>
         </motion.div>
       </section>
     </div>
   );
 };
 
-export default Home; 
+export default Home;
