@@ -5,7 +5,7 @@ const Logo = ({ className = "w-12 h-12", showText = true }) => {
   return (
     <div className={`flex items-center ${className}`}>
       {/* Logo Image */}
-      <div className="relative">
+      <div className="relative shrink-0 h-full aspect-square">
         <img
           src={logoImage}
           alt="Elevate Industries Logo"
@@ -15,11 +15,11 @@ const Logo = ({ className = "w-12 h-12", showText = true }) => {
 
       {/* Company name */}
       {showText && (
-        <div className="ml-3 text-left">
-          <div className="text-gold-500 font-serif text-xl font-bold leading-tight">
+        <div className="ml-3 text-left leading-none">
+          <div className="font-serif text-xl font-bold tracking-wide text-brass-light leading-tight">
             ELEVATE
           </div>
-          <div className="text-gold-500 font-serif text-sm font-semibold tracking-wide">
+          <div className="font-serif text-[0.7rem] font-semibold tracking-[0.3em] text-cream-200/80">
             INDUSTRIES
           </div>
         </div>
@@ -28,4 +28,4 @@ const Logo = ({ className = "w-12 h-12", showText = true }) => {
   );
 };
 
-export default Logo; 
+export default Logo;
